@@ -1,0 +1,70 @@
+{
+  "name": "Rating",
+  "type": "object",
+  "properties": {
+    "store_id": {
+      "type": "string",
+      "description": "Reference to the store being rated"
+    },
+    "store_name": {
+      "type": "string",
+      "description": "Store name for easy reference"
+    },
+    "user_email": {
+      "type": "string",
+      "description": "Email of the user who submitted the rating"
+    },
+    "user_name": {
+      "type": "string",
+      "description": "Name of the user who submitted the rating"
+    },
+    "energy_efficiency": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "User rating for energy efficiency"
+    },
+    "waste_management": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "User rating for waste management"
+    },
+    "product_sourcing": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "User rating for product sourcing"
+    },
+    "carbon_footprint": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "User rating for carbon footprint"
+    },
+    "community_engagement": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "User rating for community engagement"
+    },
+    "overall_rating": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Overall rating calculated from individual metrics"
+    },
+    "comment": {
+      "type": "string",
+      "description": "User's feedback and comments"
+    }
+  },
+  "required": [
+    "store_id",
+    "energy_efficiency",
+    "waste_management",
+    "product_sourcing",
+    "carbon_footprint",
+    "community_engagement"
+  ]
+}
