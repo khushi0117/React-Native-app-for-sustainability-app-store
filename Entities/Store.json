@@ -1,0 +1,83 @@
+{
+  "name": "Store",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Store name"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Grocery",
+        "Fashion",
+        "Electronics",
+        "Home & Garden",
+        "Restaurant",
+        "Beauty & Personal Care",
+        "Sports & Outdoor"
+      ],
+      "description": "Store category"
+    },
+    "description": {
+      "type": "string",
+      "description": "Store description"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Store image"
+    },
+    "location": {
+      "type": "string",
+      "description": "Store location/address"
+    },
+    "energy_efficiency": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Energy efficiency rating (1-5)"
+    },
+    "waste_management": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Waste management rating (1-5)"
+    },
+    "product_sourcing": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Product sourcing rating (1-5)"
+    },
+    "carbon_footprint": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Carbon footprint rating (1-5)"
+    },
+    "community_engagement": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Community engagement rating (1-5)"
+    },
+    "is_retailer_account": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this store has a retailer account"
+    },
+    "retailer_email": {
+      "type": "string",
+      "description": "Email of the retailer managing this store"
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "energy_efficiency",
+    "waste_management",
+    "product_sourcing",
+    "carbon_footprint",
+    "community_engagement"
+  ]
+}
